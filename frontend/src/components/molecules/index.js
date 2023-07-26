@@ -8,6 +8,7 @@ import MernBlogRepair from './MernBlogRepair';
 import MySkill from './MySkill';
 import Navbar from './Navbar';
 import NotFound from './NotFound';
+import Auth from '../../pages/Auth';
 import CodingProfile from '../../pages/CodingProfile';
 import ProjectDetails from './ProjectDetails';
 import Service from './Service';
@@ -16,5 +17,5 @@ import Testimonial from './Testimonial';
 
 export {
     Banner, BlogDetail, BlogIndex, Education, Footer, Information, CodingProfile, MernBlogRepair,
-    MySkill, Navbar, NotFound, ProjectDetails, Service, Testimonial
+    MySkill, Navbar, NotFound, ProjectDetails, Service, Testimonial, Auth
 };

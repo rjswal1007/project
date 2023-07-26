@@ -39,7 +39,7 @@ const TestimonialForm = () => {
                         description, 
                         image: imageUrl
                     }
-                    axios.post(`${process.env.BACKEND_URL} + api/testimonial`, testimonialData, config);
+                    axios.post(`${process.env.REACT_APP_BACKEND_URL} + api/testimonial`, testimonialData, config);
                 })
                 .catch(error => console.error(error));
             
