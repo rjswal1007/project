@@ -55,7 +55,7 @@ const Auth = () => {
           }
         }
         setLoading(true);
-        const { data } = await axios.post(process.env.BACKEND_URL + '/api/users/auth/register', {
+        const { data } = await axios.post(`${process.env.BACKEND_URL} + /api/users/auth/register`, {
           name, email, password, key
         }, config);
         localStorage.setItem('userInfo', JSON.stringify(data));
@@ -91,7 +91,7 @@ const Auth = () => {
         }
       }
       setLoading(true);
-      const { data } = await axios.post(process.env.BACKEND_URL +  '/api/users/auth/login', {
+      const { data } = await axios.post(`${process.env.BACKEND_URL} + /api/users/auth/login`, {
         email, password
       }, config);
       localStorage.setItem('userInfo', JSON.stringify(data));
