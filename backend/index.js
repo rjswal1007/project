@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(cors());
 // CORS middleware
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://shyymm-blogs.onrender.com");
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
