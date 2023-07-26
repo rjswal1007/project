@@ -12,10 +12,17 @@ const Project = require('./models/projectModel');
 
 
 const app = express();
+app.use(express.json());
 connectDB();
 app.use(express.static(path.join(__dirname, 'build')));
-app.use(express.json());
-// app.use(cors());
+app.use(cors());
+
+// CORS middleware
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://shyymm-blogs.onrender.com");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 const PORT = process.env.PORT || 5000;
 
