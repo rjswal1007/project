@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 connectDB();
 app.use(express.static(path.join(__dirname, 'build')));
-
+app.use(cors());
 // CORS middleware
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "https://shyymm-blogs.onrender.com");
