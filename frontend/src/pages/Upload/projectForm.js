@@ -63,7 +63,7 @@ const ProjectForm = () => {
                         liveLink,
                         codeLink
                     }
-                    axios.post(`${process.env.REACT_APP_BACKEND_URL} + api/project`, formData, config);
+                    axios.post(`${process.env.REACT_APP_BACKEND_URL}api/project`, formData, config);
                 })
                 .catch(error => console.error(error));
             setLoading(false);
