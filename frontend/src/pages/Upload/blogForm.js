@@ -47,7 +47,7 @@ const BlogForm = () => {
                         description,
                         image: imageUrl
                     }
-                    axios.post('/api/blog', formData, config);
+                    axios.post(process.env.BACKEND_URL + '/api/blog', formData, config);
                 })
                 .catch(error => console.error(error));
 
